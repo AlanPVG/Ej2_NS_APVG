@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ej2_NumberSorting_APVG</string>
+    <string name="hintArray">Ingresa números</string>
+    <string name="submitNum">Enviar</string>
+</resources>
