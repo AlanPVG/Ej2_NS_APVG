@@ -5,6 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class showResultActivity extends AppCompatActivity {
 
@@ -13,13 +17,29 @@ public class showResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_result);
 
-        Intent intent = getIntent();
-
-        String sortedArray = intent.getStringExtra(MainActivity.EXTRA_ARRAY_STRING);//Arreglo ordenado
+        List<Integer> origArray = (ArrayList<Integer>) getIntent().getSerializableExtra(MainActivity.EXTRA_origARRAY_STRING);
+        //List originalArray = intent.getStringExtra(MainActivity.EXTRA_origARRAY_STRING);//Arreglo original
 
         TextView resultTextV = findViewById(R.id.resultTextView);
 
-        resultTextV.setText(sortedArray);
+        Integer numberArray[] = origArray.toArray(new Integer[origArray.size()]);//Conversión de lista a arreglo
+        bubbleSort(numberArray);
+        //Collections.addAll(origArray, numberArray);
 
+        resultTextV.setText(origArray.toString() + "\n" + Arrays.deepToString(numberArray) );//
+
+    }
+
+    public void bubbleSort(Integer arr[]){
+        int n = arr.length;
+        for (int i = 0; i < n-1; i++)
+            for (int j = 0; j < n-i-1; j++)
+                if (arr[j] > arr[j+1])
+                {
+                    // swap temp and arr[i]
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
     }
 }

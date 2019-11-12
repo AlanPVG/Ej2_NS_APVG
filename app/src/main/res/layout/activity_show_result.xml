@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/resultTextView"
         android:layout_width="176dp"
-        android:layout_height="107dp"
+        android:layout_height="200dp"
         android:gravity="center"
         android:textAllCaps="false"
         android:textColor="@android:color/black"
