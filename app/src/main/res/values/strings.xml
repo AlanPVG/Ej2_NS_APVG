@@ -4,4 +4,8 @@
     <string name="submitNum">Enviar</string>
     <string name="showResBttn">Resultado</string>
     <string name="clrArr">Borra Arreglo</string>
+    <string name="numberLimit">Sólo puedes ingresar 20 números</string>
+    <string name="introduceContinue">Tienes que ingresar un número para continuar</string>
+    <string name="arrayIsEmpty">El arreglo a ordenar está vacío</string>
+    <string name="clearedArray">Arreglo borrado</string>
 </resources>

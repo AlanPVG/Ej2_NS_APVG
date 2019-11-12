@@ -41,11 +41,11 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, numberList.toString(), Toast.LENGTH_SHORT).show();
                     }
                     else{
-                        Toast.makeText(MainActivity.this, "Sólo puedes ingresar 20 números", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this,getString(R.string.numberLimit), Toast.LENGTH_SHORT).show();
                     }
                 }
                 else {
-                    Toast.makeText(MainActivity.this, "Tienes que ingresar un número para continuar", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,getString(R.string.introduceContinue), Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     openShowResultAct();
                 }
                 else{
-                    Toast.makeText(MainActivity.this, "El arreglo a ordenar está vacío", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,getString(R.string.arrayIsEmpty), Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 numberList.clear();
-                Toast.makeText(MainActivity.this, "Arreglo borrado", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,getString(R.string.clearedArray), Toast.LENGTH_SHORT).show();
 
             }
         });
