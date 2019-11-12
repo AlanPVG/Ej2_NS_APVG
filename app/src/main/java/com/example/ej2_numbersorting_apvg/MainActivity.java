@@ -1,7 +1,6 @@
 package com.example.ej2_numbersorting_apvg;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,13 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    //public static final String EXTRA_sortedARRAY_STRING = "com.example.ej2_numbersorting_apvg.EXTRA_sortedARRAY_STRING";
     public static final String EXTRA_origARRAY_STRING = "com.example.ej2_numbersorting_apvg.EXTRA_origARRAY_STRING";
     Button submitBttn, showResultBttn;
     EditText editTextNumber;
 
     public static List<Integer> numberList = new ArrayList<>();
-    public static List<Integer> auxList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,12 +40,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else{
                         Toast.makeText(MainActivity.this, "Sólo puedes ingresar 20 números", Toast.LENGTH_SHORT).show();
-                        /*
-                        Integer numberArray[] = numberList.toArray(new Integer[numberList.size()]);//Conversión de lista a arreglo
-                        bubbleSort(numberArray);
-                        Collections.addAll(auxList, numberArray);
-
-                         */
                     }
                 }
                 else {
@@ -62,7 +53,13 @@ public class MainActivity extends AppCompatActivity {
         showResultBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openShowResultAct();
+                if(numberList.size()!=0){
+                    openShowResultAct();
+                }
+                else{
+                    Toast.makeText(MainActivity.this, "El arreglo a ordenar está vacío", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
@@ -71,23 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /*public void bubbleSort(Integer arr[]){
-        int n = arr.length;
-        for (int i = 0; i < n-1; i++)
-            for (int j = 0; j < n-i-1; j++)
-                if (arr[j] > arr[j+1])
-                {
-                    // swap temp and arr[i]
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                }
-    }
-
-     */
-
     public void openShowResultAct(){
-        //String sortedArrayString = auxList.toString();
         List<Integer> originalArray = numberList;
         Intent intent = new Intent(this, showResultActivity.class);
         intent.putExtra(EXTRA_origARRAY_STRING, (Serializable) originalArray);

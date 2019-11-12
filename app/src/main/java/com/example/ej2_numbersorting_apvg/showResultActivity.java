@@ -1,13 +1,10 @@
 package com.example.ej2_numbersorting_apvg;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class showResultActivity extends AppCompatActivity {
@@ -18,14 +15,11 @@ public class showResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show_result);
 
         List<Integer> origArray = (ArrayList<Integer>) getIntent().getSerializableExtra(MainActivity.EXTRA_origARRAY_STRING);
-        //List originalArray = intent.getStringExtra(MainActivity.EXTRA_origARRAY_STRING);//Arreglo original
 
         TextView resultTextV = findViewById(R.id.resultTextView);
 
         Integer numberArray[] = origArray.toArray(new Integer[origArray.size()]);//Conversión de lista a arreglo
         bubbleSort(numberArray);
-        //Collections.addAll(origArray, numberArray);
-
         resultTextV.setText(origArray.toString() + "\n" + Arrays.deepToString(numberArray) );//
 
     }
