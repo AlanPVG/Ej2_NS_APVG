@@ -13,7 +13,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_origARRAY_STRING = "com.example.ej2_numbersorting_apvg.EXTRA_origARRAY_STRING";
-    Button submitBttn, showResultBttn;
+    Button submitBttn, showResultBttn, clrArrayBttn;
     EditText editTextNumber;
 
     public static List<Integer> numberList = new ArrayList<>();
@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         submitBttn = findViewById(R.id.submitNumber);
 
         showResultBttn = findViewById(R.id.showResBttn);
+
+        clrArrayBttn = findViewById(R.id.clearArray);
 
 
         submitBttn.setOnClickListener(new View.OnClickListener() {
@@ -59,6 +61,15 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     Toast.makeText(MainActivity.this, "El arreglo a ordenar está vacío", Toast.LENGTH_SHORT).show();
                 }
+
+            }
+        });
+
+        clrArrayBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberList.clear();
+                Toast.makeText(MainActivity.this, "Arreglo borrado", Toast.LENGTH_SHORT).show();
 
             }
         });

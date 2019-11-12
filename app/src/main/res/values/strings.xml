@@ -3,4 +3,5 @@
     <string name="hintArray">Ingresa números</string>
     <string name="submitNum">Enviar</string>
     <string name="showResBttn">Resultado</string>
+    <string name="clrArr">Borra Arreglo</string>
 </resources>
