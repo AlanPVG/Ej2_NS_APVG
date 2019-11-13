@@ -4,21 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/APVG"
     tools:context=".showResultActivity">
 
     <!-- Caja de texto - Nombre -->
+
     <TextView
-        android:id="@+id/resultTextView"
-        android:layout_width="176dp"
-        android:layout_height="200dp"
+        android:id="@+id/originalTextView"
+        android:layout_width="247dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="500dp"
         android:gravity="center"
         android:textAllCaps="false"
         android:textColor="@android:color/black"
         android:textSize="15sp"
+        android:background="@drawable/edittext_border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.372" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="237dp"
+        android:layout_height="113dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:background="@drawable/edittext_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/originalTextView"
+        app:layout_constraintVertical_bias="0.13" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

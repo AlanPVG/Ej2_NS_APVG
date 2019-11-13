@@ -25,12 +25,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        
-        ConstraintLayout constraintLayout = findViewById(R.id.layout);
+        /*ConstraintLayout constraintLayout = findViewById(R.id.layout);
         AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
         animationDrawable.setEnterFadeDuration(2000);
         animationDrawable.setExitFadeDuration(2000);
         animationDrawable.start();
+        
+         */
 
         editTextNumber = findViewById(R.id.arrNumber);
 

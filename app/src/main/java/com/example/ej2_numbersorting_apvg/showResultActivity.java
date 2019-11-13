@@ -16,11 +16,14 @@ public class showResultActivity extends AppCompatActivity {
 
         List<Integer> origArray = (ArrayList<Integer>) getIntent().getSerializableExtra(MainActivity.EXTRA_origARRAY_STRING);
 
+
+        TextView originalTextV = findViewById(R.id.originalTextView);
         TextView resultTextV = findViewById(R.id.resultTextView);
 
         Integer numberArray[] = origArray.toArray(new Integer[origArray.size()]);//Conversión de lista a arreglo
         bubbleSort(numberArray);
-        resultTextV.setText(origArray.toString() + "\n" + Arrays.deepToString(numberArray) );//
+        originalTextV.setText(getString(R.string.origArray)+"\n"+origArray.toString());
+        resultTextV.setText(getString(R.string.sortedArray)+"\n"+ Arrays.deepToString(numberArray) );//
 
     }
 

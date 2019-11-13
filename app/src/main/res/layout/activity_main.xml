@@ -5,14 +5,33 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_list"
+    android:background="@android:color/holo_orange_dark"
     tools:context="com.example.ej2_numbersorting_apvg.MainActivity">
+
+    <TextView
+        android:id="@+id/nameSortingApp"
+        android:layout_width="250dp"
+        android:layout_height="107dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:text="@string/title_label"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.061" />
 
     <EditText
         android:id="@+id/arrNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="300dp"
         android:layout_marginBottom="500dp"
         android:background="@drawable/edit_text_border"
         android:hint="@string/hintArray"
@@ -25,38 +44,57 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/submitNumber"
-            android:layout_width="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_height="wrap_content"
-            android:text="@string/submitNum"
-            android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@+id/arrNumber"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+    <Button
+        android:id="@+id/submitNumber"
+        android:layout_width="175dp"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content"
+        android:text="@string/submitNum"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_shape"
+        app:layout_constraintTop_toBottomOf="@+id/arrNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <Button
         android:id="@+id/showResBttn"
-        android:layout_width="wrap_content"
+        android:layout_width="175dp"
         android:layout_marginTop="40dp"
         android:layout_height="wrap_content"
         android:text="@string/showResBttn"
-        android:textSize="20sp"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_shape"
         app:layout_constraintTop_toBottomOf="@+id/submitNumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
     <Button
         android:id="@+id/clearArray"
-        android:layout_width="wrap_content"
+        android:layout_width="175dp"
         android:layout_marginTop="40dp"
         android:layout_height="wrap_content"
         android:text="@string/clrArr"
-        android:textSize="20sp"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_shape"
         app:layout_constraintTop_toBottomOf="@+id/showResBttn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/creditsButton"
+        android:layout_width="103dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="10dp"
+
+        android:background="@drawable/number_icon"
+        app:layout_constraintBottom_toBottomOf="@id/nameSortingApp"
+        app:layout_constraintStart_toEndOf="@id/nameSortingApp"
+        app:layout_constraintTop_toTopOf="@id/nameSortingApp"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
