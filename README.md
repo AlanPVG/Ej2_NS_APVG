@@ -2,7 +2,7 @@
 
 Aplicación que permite al usuario agregar un máximo de 20 números (de 4 dígitos cada uno) a un arreglo, para ser ordenado.  Incluye soporte para lenguaje en español e inglés.
 
-Para el ordenamiento, se emplea el algoritmo <b><u>bubble sort</u></b>.
+Para el ordenamiento, se emplea el algoritmo <u><b>bubble sort</b></u>.
 
 La aplicación cuenta con dos activities:
 
