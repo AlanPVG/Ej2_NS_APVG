@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Ej2_NumberSorting_APVG</string>
+    <string name="title_label">Number Sorting</string>
+    <string name="hintArray">Enter a number</string>
+    <string name="submitNum">Send</string>
+    <string name="showResBttn">Result</string>
+    <string name="clrArr">Clear Array</string>
+    <string name="numberLimit">You can only introduce 20 numbers</string>
+    <string name="introduceContinue">You\'ve got to enter a number to continue</string>
+    <string name="arrayIsEmpty">The array to be sorted is empty</string>
+    <string name="clearedArray">Array cleared</string>
+    <string name="origArray">Original Arrat:</string>
+    <string name="sortedArray">Sorted Array:</string>
+</resources>
